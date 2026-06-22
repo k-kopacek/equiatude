@@ -31,9 +31,22 @@
 <section>
   <h1>Our Mission</h1>
   <div class="divider-line"></div>
-  <div class="center-img" style="max-width:520px; margin:24px auto;">
-    <img src="assets/mission-photo.jpg" alt="Equiatude client with a therapy horse" class="framed">
+
+  <div class="photo-wheel" data-interval="5000">
+    <div class="photo-wheel-slides">
+      <img src="assets/wheel-1.jpg" alt="Equiatude client with a therapy horse" class="active">
+      <img src="assets/wheel-2.jpg" alt="Off-track thoroughbred at the Equiatude farm">
+      <img src="assets/wheel-3.jpg" alt="A therapy session at Equiatude Foundation">
+      <img src="assets/wheel-4.jpg" alt="The Equiatude farm grounds">
+    </div>
+    <div class="photo-wheel-dots">
+      <button class="dot active" aria-label="Show photo 1"></button>
+      <button class="dot" aria-label="Show photo 2"></button>
+      <button class="dot" aria-label="Show photo 3"></button>
+      <button class="dot" aria-label="Show photo 4"></button>
+    </div>
   </div>
+
   <div class="section-narrow">
     <p>Welcome to Equiatude Foundation, where we believe in the transformative power of equine therapy for women and children who have endured the trauma of physical or sexual abuse. Our mission is to rehabilitate "off-track thoroughbreds" — horses previously used for racing — and harness their ability to provide healing and support to those in need.</p>
     <p>Living through abuse can shatter one's sense of self-worth and identity. Women in these situations often find themselves lost, struggling to navigate a world that feels dominated by fear and confusion. They lose touch with what truly matters in life, feeling as though they constantly fall short or do something wrong. Many endure the debilitating effects of PTSD, which can strain their ability to form trusting relationships and engage fully with the world around them.</p>
@@ -75,5 +88,6 @@
   <div class="legal">© Equiatudefoundation.org. All rights reserved.</div>
 </footer>
 
+<script src="photo-wheel.js" defer></script>
 </body>
 </html>
