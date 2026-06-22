@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Equiatude Foundation</title>
+<meta name="description" content="Get in touch with Equiatude Foundation for confidential support, resources, or to learn more about equine therapy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo-row">
+    <a href="index.html">
+      <svg viewBox="0 0 60 60" width="64" height="64"><path d="M14 46c3-16 10-26 20-26s14 10 10 20c-2 5-7 6-10 3-5-5 0-11 6-9 8 2.5 10 11 6 16" stroke="#2EC4B6" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+      <span class="logo-text">Equiatude</span>
+    </a>
+  </div>
+  <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.main-nav').classList.toggle('open')">☰</button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="donors.html">Donors &amp; Volunteers</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="horses.html">Meet Our Horses</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="donate.html" class="btn">Donate</a>
+  </nav>
+</header>
+
+<section class="section-narrow">
+  <h1>Get In Touch With Us</h1>
+  <div class="divider-line"></div>
+  <p style="margin-top:24px;">If you or anyone you know could benefit from Equine Therapy here at Equiatude or need any other confidential help or resources for help please contact Stephanie.</p>
+</section>
+
+<section class="gray-bg">
+  <div class="section-inner" style="max-width:520px;">
+    <form action="#" method="POST" style="display:grid; gap:16px;">
+      <div>
+        <label for="name" style="display:block; margin-bottom:6px; font-weight:700; font-size:0.9rem;">Name</label>
+        <input id="name" name="name" type="text" required style="width:100%; padding:11px 14px; border-radius:4px; border:1px solid #ccc;">
+      </div>
+      <div>
+        <label for="email" style="display:block; margin-bottom:6px; font-weight:700; font-size:0.9rem;">Email</label>
+        <input id="email" name="email" type="email" required style="width:100%; padding:11px 14px; border-radius:4px; border:1px solid #ccc;">
+      </div>
+      <div>
+        <label for="message" style="display:block; margin-bottom:6px; font-weight:700; font-size:0.9rem;">Message</label>
+        <textarea id="message" name="message" rows="5" required style="width:100%; padding:11px 14px; border-radius:4px; border:1px solid #ccc;"></textarea>
+      </div>
+      <button type="submit" class="btn" style="justify-self:start; background:var(--teal); color:#fff !important;">Send Message</button>
+      <p style="font-size:0.8rem; opacity:0.7; margin:0;">Note: connect this form to a service like Formspree or Google Forms to receive submissions.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>Arkansas, USA</p>
+  <p>Email: <a href="mailto:Equiatudefoundation@gmail.com">Equiatudefoundation@gmail.com</a></p>
+  <p>Phone: <a href="tel:5135551165">513-555-1165</a></p>
+  <div class="social"><a href="#" aria-label="Facebook">●</a></div>
+  <div class="legal">© Equiatudefoundation.org. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
