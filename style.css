@@ -124,3 +124,43 @@ footer .social a{ color: var(--teal); font-size:1.2rem; margin: 0 6px; }
 footer .legal{ font-size:0.78rem; opacity:0.6; margin-top: 14px; }
 
 input, textarea{ font-family: 'Lato', sans-serif; }
+
+/* ===== Photo Wheel (rotating slideshow) ===== */
+.photo-wheel{
+  position: relative;
+  max-width: 720px;
+  margin: 24px auto;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--gray-bg);
+}
+.photo-wheel-slides{ position: absolute; inset: 0; }
+.photo-wheel-slides img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.photo-wheel-slides img.active{ opacity: 1; }
+
+.photo-wheel-dots{
+  position: absolute;
+  left: 0; right: 0; bottom: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.photo-wheel-dots .dot{
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  background: rgba(255,255,255,0.35);
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.photo-wheel-dots .dot.active{ background: var(--teal); border-color: var(--teal); }
