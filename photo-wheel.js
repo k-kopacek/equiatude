@@ -28,13 +28,43 @@ document.addEventListener('DOMContentLoaded', function () {
       timer = null;
     }
 
+    // Dot navigation
     dots.forEach(function (dot, n) {
-      dot.addEventListener('click', function () {
-        show(n);
-        start();
-      });
+      dot.addEventListener('click', function () { show(n); start(); });
     });
 
+    // Arrow buttons (injected dynamically)
+    var prevBtn = document.createElement('button');
+    prevBtn.className = 'photo-wheel-arrow photo-wheel-prev';
+    prevBtn.setAttribute('aria-label', 'Previous photo');
+    prevBtn.innerHTML = '&#8249;';
+    prevBtn.addEventListener('click', function () { show(index - 1); start(); });
+
+    var nextBtn = document.createElement('button');
+    nextBtn.className = 'photo-wheel-arrow photo-wheel-next';
+    nextBtn.setAttribute('aria-label', 'Next photo');
+    nextBtn.innerHTML = '&#8250;';
+    nextBtn.addEventListener('click', function () { show(index + 1); start(); });
+
+    wheel.appendChild(prevBtn);
+    wheel.appendChild(nextBtn);
+
+    // Swipe support (touch)
+    var touchStartX = null;
+    wheel.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    wheel.addEventListener('touchend', function (e) {
+      if (touchStartX === null) return;
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        show(diff > 0 ? index + 1 : index - 1);
+        start();
+      }
+      touchStartX = null;
+    }, { passive: true });
+
+    // Pause on hover/focus
     wheel.addEventListener('mouseenter', stop);
     wheel.addEventListener('mouseleave', start);
     wheel.addEventListener('focusin', stop);
