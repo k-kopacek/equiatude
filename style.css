@@ -129,7 +129,7 @@ ul.clean li{ margin-bottom: 0.5em; }
 
 /* ===== Horse Roster (two-column lineup) ===== */
 .horse-roster{ display:grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 36px; text-align:center; }
-.horse-roster img{ width:100%; aspect-ratio: 3/2; max-height: 260px; object-fit: cover; object-position: center; border-radius:2px; display:block; margin-bottom:16px; }
+.horse-roster img{ width:100%; aspect-ratio: 4/3; object-fit: cover; object-position: center; border-radius:2px; display:block; margin-bottom:16px; }
 .horse-roster h3{ margin-bottom:6px; color: var(--teal-deep); }
 
 footer{ background: var(--charcoal); color: #cfcfcf; padding: 34px 24px 22px; text-align:center; }
